@@ -5,6 +5,9 @@
 { config, pkgs, ... }:
 
 {
+  # Change the configuration path of nix
+  # nix.nixPath = [ "nixos-config=/path/to/configuration.nix" ];
+  
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -109,6 +112,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Add ~/.local/bin/ to $PATH
+  environment.localBinInPath = true;
+
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.desktopManager.plasma5.enable = true;
   services.xserver.displayManager = {
@@ -149,7 +155,7 @@
   users.users.siddharth = {
     isNormalUser = true;
     description = "siddharth";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "storage" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -163,7 +169,6 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
-    git
     kate
     ntfs3g
     firefox-wayland
@@ -216,9 +221,9 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 7d"
-    }
-  }
+      options = "--delete-older-than 7d";
+    };
+  };
 
 
   # This value determines the NixOS release from which the default

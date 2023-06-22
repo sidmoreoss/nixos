@@ -27,6 +27,13 @@ in
         size = 10000;
       };
     };
+
+    # Configure git
+    programs.git = {
+      enable = true;
+      userName  = "Siddharth More";
+      userEmail = "sidmoreoss@gmail.com";
+    };
   };
 }
 
