@@ -13,12 +13,16 @@
 
   # Configure booting.
   boot = {
-    # Stay up-to-date on the kernel.
+    # Specify the kernel.
     kernelPackages = pkgs.linuxPackages_latest;
+
     loader = {
-      systemd-boot.editor = false;
       # Use the systemd-boot EFI boot loader.
-      systemd-boot.enable = true;
+      systemd-boot = {
+        enable = true;
+        editor = false;
+        configurationLimit = 3;
+      };
       efi.canTouchEfiVariables = true;
     };
     # Silent Boot
@@ -59,7 +63,15 @@
   networking.networkmanager.enable = true;
 
   # Enable bluetooth
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    # hsphfpd.enable = true;
+    # settings = {
+    #   General = {
+    #     Enable = "Source,Sink,Media,Socket";
+    #   };
+    # };
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
@@ -98,9 +110,11 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.displayManager.defaultSession = "plasmawayland";
+  services.xserver.displayManager = {
+    sddm.enable = true;
+    defaultSession = "plasmawayland";
+  };
 
   # Configure keymap in X11
   services.xserver = {
@@ -147,21 +161,23 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     wget
     git
     kate
     ntfs3g
-    partition-manager
     firefox-wayland
     strawberry
     qbittorrent
     libsForQt5.filelight
-    jellyfin
     variety
     librewolf
-    merriweather-sans
     vlc
+  ];
+
+  # Fonts
+  fonts.fonts = with pkgs; [
+    merriweather-sans
   ];
 
   # Configure shell
@@ -190,6 +206,17 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  # Nix store
+  nix = {
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d"
+    }
+  }
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
