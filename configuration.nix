@@ -181,6 +181,8 @@
   # Fonts
   fonts.fonts = with pkgs; [
     merriweather-sans
+    font-awesome
+    meslo-lgs-nf
   ];
 
   # Configure shell
