@@ -19,8 +19,9 @@
     # Enable ntfs
     supportedFilesystems = [ "ntfs" ];
 
-    # Specify the kernel.
-    kernelPackages = pkgs.linuxPackages_latest;
+    # Specify the kernel https://nixos.wiki/wiki/Linux_kernel
+    # kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_zen;
 
     loader = {
       # Use the systemd-boot EFI boot loader.
@@ -55,7 +56,6 @@
       ];
     };
   };
-  programs.dconf.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -123,6 +123,7 @@
     sddm.enable = true;
     defaultSession = "plasmawayland";
   };
+  programs.dconf.enable = true;  # Sync GTK settings to KDE
 
   # Configure keymap in X11
   services.xserver = {
@@ -144,10 +145,6 @@
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -166,8 +163,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # List packages installed in system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -228,11 +224,11 @@
   };
 
   # Mount media disk
-  fileSystems."/run/media/Media" =
-  { device = "/dev/disk/by-label/Media";
+  fileSystems."/run/media/Media" = { 
+    device = "/dev/disk/by-label/Media";
     fsType = "ntfs";
     noCheck = true;
-    options = [ "nofail" ];  # Will not crash the system if failed to mount
+    options = [ "nofail" ];  # nofail will not crash the system if failed to mount
   };
 
   # This value determines the NixOS release from which the default
