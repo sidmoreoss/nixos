@@ -27,7 +27,7 @@
       systemd-boot = {
         enable = true;
         editor = false;
-        configurationLimit = 3;
+        configurationLimit = 5;
       };
       efi.canTouchEfiVariables = true;
     };
@@ -36,7 +36,6 @@
     kernelParams = [
       "quiet"
       "splash"
-      "vga=current"
       "rd.systemd.show_status=false"
       "rd.udev.log_level=3"
       "udev.log_priority=3"
@@ -209,8 +208,8 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
-  # Security
-  security.polkit.enable = true;
+  # # Security
+  # security.polkit.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -228,11 +227,13 @@
     };
   };
 
-  # This causes system to go into recovery mode, need to check
-  # fileSystems."/run/media/Media" =
-  # { device = "/dev/disk/by-label/Media";
-  #   fsType = "ntfs"; 
-  # };
+  # Mount media disk
+  fileSystems."/run/media/Media" =
+  { device = "/dev/disk/by-label/Media";
+    fsType = "ntfs";
+    noCheck = true;
+    options = [ "nofail" ];  # Will not crash the system if failed to mount
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -241,5 +242,5 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-
+  # Don't change the state version
 }
