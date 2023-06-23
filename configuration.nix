@@ -16,6 +16,9 @@
 
   # Configure booting.
   boot = {
+    # Enable ntfs
+    supportedFilesystems = [ "ntfs" ];
+
     # Specify the kernel.
     kernelPackages = pkgs.linuxPackages_latest;
 
@@ -170,7 +173,6 @@
     vim
     wget
     kate
-    ntfs3g
     firefox-wayland
     strawberry
     qbittorrent
@@ -226,6 +228,11 @@
     };
   };
 
+  # This causes system to go into recovery mode, need to check
+  # fileSystems."/run/media/Media" =
+  # { device = "/dev/disk/by-label/Media";
+  #   fsType = "ntfs"; 
+  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
