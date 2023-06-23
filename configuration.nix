@@ -176,6 +176,7 @@
     qbittorrent
     libsForQt5.filelight
     variety
+    vscode
     librewolf
     vlc
   ];
