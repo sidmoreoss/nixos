@@ -155,9 +155,6 @@
     isNormalUser = true;
     description = "siddharth";
     extraGroups = [ "networkmanager" "wheel" "storage" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
 
   # Allow unfree packages
@@ -168,8 +165,8 @@
     vim
     wget
     kate
-    # firefox-wayland
-    firefox-beta-bin
+    firefox-wayland
+    # firefox-beta-bin
     strawberry
     qbittorrent
     libsForQt5.filelight
@@ -179,7 +176,7 @@
     vlc
   ];
 
-  # Fonts
+  # Fonts: https://nixos.wiki/wiki/Fonts
   fonts.fonts = with pkgs; [
     merriweather-sans
     font-awesome

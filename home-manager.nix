@@ -12,7 +12,7 @@ in
     home.stateVersion = "18.09";
     /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
 
-    # Configure shell
+    # Configure shell: https://nixos.wiki/wiki/Zsh
     programs.zsh = {
       enable = true;
       shellAliases = {
