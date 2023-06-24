@@ -168,7 +168,8 @@
     vim
     wget
     kate
-    firefox-wayland
+    # firefox-wayland
+    firefox-beta-bin
     strawberry
     qbittorrent
     libsForQt5.filelight

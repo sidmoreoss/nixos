@@ -35,6 +35,15 @@ in
       userEmail = "sidmoreoss@gmail.com";
     };
 
+    # Configure scripts https://borretti.me/article/nixos-for-the-impatient
+    home.file = {
+      ".local/bin" = {
+        source = ./sources/scripts;
+        recursive = true;
+      };
+    };
+    
+
     # Pipewire config (find a better way to do this)
     xdg.configFile."pipewire/pipewire.conf.d/pipewire.conf".text = 
       ''  
