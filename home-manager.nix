@@ -24,7 +24,13 @@ in
       enableSyntaxHighlighting = true;
       autocd = true;
       history = {
-        size = 10000;
+        size = 100000;
+      };
+
+      oh-my-zsh = {
+        enable = true;
+        plugins = [ "git" ];
+        theme = "robbyrussell";
       };
     };
 
@@ -44,7 +50,7 @@ in
     };
     
 
-    # Pipewire config (find a better way to do this)
+    # Pipewire config for no resampling (find a better way to do this)
     xdg.configFile."pipewire/pipewire.conf.d/pipewire.conf".text = 
       ''  
       {
