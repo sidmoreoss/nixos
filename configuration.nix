@@ -48,11 +48,12 @@
 
   # Enable xdg desktop integration
   xdg = {
+    autostart.enable = true;  # Enable autostart applications
     portal = {
       enable = true;
       extraPortals = with pkgs; [
         xdg-desktop-portal-wlr
-        xdg-desktop-portal-gtk
+        xdg-desktop-portal-gtk  # Enable gtk portal
       ];
     };
   };
@@ -174,14 +175,18 @@
     vscode
     librewolf
     vlc
+    libreoffice-qt
   ];
 
   # Fonts: https://nixos.wiki/wiki/Fonts
-  fonts.fonts = with pkgs; [
-    merriweather-sans
-    font-awesome
-    meslo-lgs-nf
-  ];
+  fonts = {
+    fontDir.enable = true;
+    fonts = with pkgs; [
+      merriweather-sans
+      font-awesome
+      meslo-lgs-nf
+    ];
+  };
 
   # Configure shell
   programs.zsh.enable = true;
@@ -205,7 +210,7 @@
   # services.openssh.enable = true;
 
   # # Security
-  # security.polkit.enable = true;
+  # security.polkit.enable = true; # Enabled by default for KDE
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
