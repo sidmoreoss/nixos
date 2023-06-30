@@ -119,12 +119,20 @@
   environment.localBinInPath = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.displayManager = {
-    sddm.enable = true;
-    defaultSession = "plasmawayland";
+  services.xserver = {
+    displayManager = {
+      sddm.enable = true;
+      defaultSession = "plasmawayland";
+    };
+    desktopManager.plasma5.enable = true;
   };
+  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+    elisa
+    khelpcenter
+    oxygen
+  ];
   programs.dconf.enable = true;  # Sync GTK settings to KDE
+  programs.kdeconnect.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -144,8 +152,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -167,13 +174,14 @@
     wget
     kate
     firefox-wayland
+    brave
     # firefox-beta-bin
     strawberry
     qbittorrent
     libsForQt5.filelight
+    libsForQt5.packagekit-qt
     variety
     vscode
-    librewolf
     vlc
     libreoffice-qt
   ];
@@ -195,6 +203,13 @@
 
   # Enable jellyfin
   services.jellyfin.enable = true;
+
+  # Power management
+  # kde uses PowerDevil for power management, so logind won't work
+  # services.logind = {
+  #   lidSwitchExternalPower = "lock";  # Lock screen when the laptop lid is closed and the system is on external power
+  #   lidSwitch = "suspend";  # Sleep when the laptop lid is closed
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
