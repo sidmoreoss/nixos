@@ -183,6 +183,7 @@
     variety
     vscode
     vlc
+    fzf
     libreoffice-qt
   ];
 
