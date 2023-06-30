@@ -180,6 +180,7 @@
     qbittorrent
     libsForQt5.filelight
     libsForQt5.packagekit-qt
+    libsForQt5.sddm-kcm
     variety
     vscode
     vlc
