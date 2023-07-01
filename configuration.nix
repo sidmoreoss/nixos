@@ -121,7 +121,15 @@
   # Enable the KDE Plasma Desktop Environment.
   services.xserver = {
     displayManager = {
-      sddm.enable = true;
+      sddm = {
+        enable = true;
+        settings = {
+          Theme={
+            Font = "Merriweather Sans Black, 10";
+            CursorTheme = "breeze_cursors";
+          };
+        };
+      };
       defaultSession = "plasmawayland";
     };
     desktopManager.plasma5.enable = true;
