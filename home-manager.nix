@@ -12,28 +12,6 @@ in
     home.stateVersion = "18.09";
     /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
 
-    # Configure shell: https://nixos.wiki/wiki/Zsh
-    programs.zsh = {
-      enable = true;
-      shellAliases = {
-        ll = "ls -l";
-        update = "sudo nixos-rebuild switch";
-      };
-      enableCompletion = true;
-      enableAutosuggestions = true;
-      enableSyntaxHighlighting = true;
-      autocd = true;
-      history = {
-        size = 100000;
-      };
-
-      oh-my-zsh = {
-        enable = true;
-        plugins = [ "git" ];
-        theme = "robbyrussell";
-      };
-    };
-
     # Configure git
     programs.git = {
       enable = true;
