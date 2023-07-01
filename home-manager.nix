@@ -28,7 +28,6 @@ in
       enable = true;
       workspace.clickItemTo = "select";
       shortcuts = {
-        "firefox.desktop"."_launch" = "Meta+B";
         "kwin"."Switch to Desktop 1" = "Meta+1";
         "kwin"."Switch to Desktop 2" = "Meta+2";
         "kwin"."Switch to Desktop 3" = "Meta+3";
