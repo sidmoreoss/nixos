@@ -10,7 +10,7 @@
   
   imports = 
   [
-    ./hardware-configuration.nix # Current system hardware config @ /etc/nixos/hardware-configuration.nix
+    /etc/nixos/hardware-configuration.nix # Current system hardware config
     ./home-manager.nix
     ./modules
   ];
