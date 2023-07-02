@@ -16,6 +16,8 @@
     libsForQt5.sddm-kcm
     variety
     vscode
+    kid3
+    krename
     vlc
     fzf
     libreoffice-qt
