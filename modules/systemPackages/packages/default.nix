@@ -4,7 +4,7 @@
   # List packages installed in system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
     # Browsers
-    firefox-wayland
+    firefox-beta  # Beta version (v115 >) supports hardware video decoding
     brave
 
     # Text/Code editors
