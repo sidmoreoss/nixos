@@ -44,6 +44,8 @@ in
         "kwin"."Window to Desktop 7" = "Meta+&";
       };
       files = {
+        "baloofilerc"."General"."folders\[$e\]" = "$HOME/,/run/media/Media/";  # Index media
+        "baloofilerc"."General"."exclude filters" = "*~,*.part,*.o,*.la,*.lo,*.loT,*.moc,moc_*.cpp,qrc_*.cpp,ui_*.h,cmake_install.cmake,CMakeCache.txt,CTestTestfile.cmake,libtool,config.status,confdefs.h,autom4te,conftest,confstat,Makefile.am,*.gcode,.ninja_deps,.ninja_log,build.ninja,*.csproj,*.m4,*.rej,*.gmo,*.pc,*.omf,*.aux,*.tmp,*.po,*.vm*,*.nvram,*.rcore,*.swp,*.swap,lzo,litmain.sh,*.orig,.histfile.*,.xsession-errors*,*.map,*.so,*.a,*.db,*.qrc,*.ini,*.init,*.img,*.vdi,*.vbox*,vbox.log,*.qcow2,*.vmdk,*.vhd,*.vhdx,*.sql,*.sql.gz,*.ytdl,*.class,*.pyc,*.pyo,*.elc,*.qmlc,*.jsc,*.fastq,*.fq,*.gb,*.fasta,*.fna,*.gbff,*.faa,po,CVS,.svn,.git,_darcs,.bzr,.hg,CMakeFiles,CMakeTmp,CMakeTmpQmake,.moc,.obj,.pch,.uic,.npm,.yarn,.yarn-cache,__pycache__,node_modules,node_packages,nbproject,.venv,venv,core-dumps,lost+found";
         "kwinrc"."Desktops"."Id_1" = "bd2a25bc-ab01-43a5-b63b-c23ae7d6662f";
         "kwinrc"."Desktops"."Id_2" = "fe50e4b2-b800-40fc-8e14-a7b31cb0bf29";
         "kwinrc"."Desktops"."Id_3" = "7eba4b70-370b-4972-bbb2-06a6d4546031";
