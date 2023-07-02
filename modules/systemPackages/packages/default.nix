@@ -3,23 +3,35 @@
 {
   # List packages installed in system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim
-    wget
-    kate
+    # Browsers
     firefox-wayland
     brave
-    # firefox-beta-bin
-    strawberry
-    qbittorrent
-    libsForQt5.filelight
-    libsForQt5.packagekit-qt
-    libsForQt5.sddm-kcm
-    variety
+
+    # Text/Code editors
+    vim
+    kate
     vscode
-    kid3
-    krename
+    
+    # Video players
     vlc
-    fzf
+
+    # Torrent
+    qbittorrent
+
+    # Music
+    spotify
+    strawberry  # Music player
+    kid3  # Audio tagger
+
+    # Utils
+    wget  # Downloader
+    krename  # Bulk rename
+    fzf  # Fuzzy search
+
+    # Wallpaper
+    variety
+
+    # Office
     libreoffice-qt
   ];
 }
