@@ -22,6 +22,7 @@
 
     # Silent Boot
     # https://wiki.archlinux.org/title/Silent_boot
+    # https://discourse.nixos.org/t/removing-persistent-boot-messages-for-a-silent-boot/14835/10
     kernelParams = [
       "quiet"
       "splash"
