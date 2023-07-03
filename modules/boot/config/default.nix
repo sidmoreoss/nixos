@@ -27,12 +27,13 @@
       "rd.udev.log_level=3" 
       "udev.log_priority=3" 
       "boot.shell_on_fail" 
+      # "fbcon=nodefer"  # Disable the vendor logo once os boots
     ];
 
     # Plymouth hides all logs from boot screen
     plymouth = {
       enable = true;
-      extraConfig = "ShowDelay=5";
+      # extraConfig = "ShowDelay=5";
     };
     consoleLogLevel = 0;
     initrd.verbose = false;
