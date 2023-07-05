@@ -33,7 +33,7 @@
     # Plymouth hides all logs from boot screen
     plymouth = {
       enable = true;
-      # extraConfig = "ShowDelay=5";
+      extraConfig = "ShowDelay=5";
     };
     consoleLogLevel = 0;
     initrd.verbose = false;
