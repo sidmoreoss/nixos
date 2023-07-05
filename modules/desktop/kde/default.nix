@@ -30,9 +30,9 @@
 
   environment = {
     systemPackages = with pkgs.libsForQt5; [  # Packages installed
-      packagekit-qt  # Enable discover
+      # packagekit-qt  # Enable discover
+      # discover
       filelight
-      sddm-kcm
     ];
     plasma5.excludePackages = with pkgs.libsForQt5; [
       elisa
