@@ -5,7 +5,6 @@
   environment.systemPackages = with pkgs; [
     # Browsers
     firefox-beta  # Beta version (v115 >) supports hardware video decoding
-    brave
 
     # Text/Code editors
     vim
