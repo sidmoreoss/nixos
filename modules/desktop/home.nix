@@ -1,0 +1,3 @@
+[
+  ./kde/home.nix
+]

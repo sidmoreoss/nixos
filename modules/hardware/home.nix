@@ -1,0 +1,3 @@
+[
+  ./sound/home.nix
+]

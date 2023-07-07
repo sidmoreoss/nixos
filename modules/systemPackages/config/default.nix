@@ -7,7 +7,11 @@
 
   # Nix store garbage collection
   nix = {
-    settings.auto-optimise-store = true;
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [ "nix-command" "flakes" ];  # Allow use of flakes
+    };
+
     gc = {
       automatic = true;
       dates = "weekly";
