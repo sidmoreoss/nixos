@@ -2,7 +2,7 @@
 {
   home.file = {  # My scripts
     ".local/bin" = {
-      source = ../../../resources/scripts;
+      source = ../../../sources/scripts;
       recursive = true;
     };
   };
