@@ -13,5 +13,5 @@
 ## Usage
 
 1. To update the system: ```nix flake update```
-2. To update or rebuild the system: ```sudo nixos-rebuild switch --flake .#dell7560```
+2. To update or rebuild the system: ```sudo nixos-rebuild switch --flake ~/.setup/nixos#dell7560```
 3. Note: Step 2 should be executed if there is a change in configuration files. To update the system Step 2 should be executed after Step 1.
