@@ -4,7 +4,7 @@
 
 ### Copy and paste commands in order
 
-1. ```git clone git@github.com:sidmoreoss/nixos.git ~/.setup```
+1. ```git clone git@github.com:sidmoreoss/nixos.git ~/.setup/nixos```
 2. ```cd ~/.setup/nixos```
 3. ```cp /etc/nixos/hardware-configuration.nix ./hosts/dell7560```
 4. ```sudo nixos-rebuild switch --flake .#dell7560``` to apply the configuration.
