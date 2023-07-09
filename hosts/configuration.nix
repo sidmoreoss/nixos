@@ -8,10 +8,8 @@
   # Change the configuration path of nix
   # nix.nixPath = [ "nixos-config=/path/to/configuration.nix" ];
   
-  imports = 
-  [
-    ./hardware-configuration.nix # Current system hardware config
-    ./modules
+  imports = [
+    ../modules
   ];
   
   # This value determines the NixOS release from which the default
