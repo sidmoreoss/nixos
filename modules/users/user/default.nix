@@ -2,9 +2,8 @@
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.siddharth = {
+  users.users.${user} = {
     isNormalUser = true;
-    # description = ${user};
     extraGroups = [ "networkmanager" "wheel" "storage" "video" "audio" "camera" "lp" "scanner" "kvm" "libvirtd" ];
   };
 }

@@ -16,7 +16,7 @@ let
   lib = nixpkgs.lib;
 in
 {
-  dellInspiron7560 = lib.nixosSystem {                                # Laptop profile
+  dell7560 = lib.nixosSystem {                                # Laptop profile
     inherit system;
 
     specialArgs = {
@@ -26,7 +26,7 @@ in
     modules = [
       nur.nixosModules.nur
       ./configuration.nix  # Configuration for all hosts
-      ./dellInspiron7560  # Configuration for dell inspiron 7560
+      ./dell7560  # Configuration for dell inspiron 7560
 
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
@@ -36,7 +36,7 @@ in
           imports = [
             plasma-manager.homeManagerModules.plasma-manager  # Enable plasma-manager
             ./home.nix  # Personal home configuration
-            ./dellInspiron7560/home.nix  # Home configuration for laptop
+            ./dell7560/home.nix  # Home configuration for laptop
           ];
         };
       }
