@@ -5,15 +5,14 @@
 
   nixpkgs.config.allowUnfree = true;  # Allow unfree packages
 
-  # Nix store garbage collection
   nix = {
     settings = {
-      auto-optimise-store = true;
+      auto-optimise-store = true;  # Save space via hardlinking store files
       experimental-features = [ "nix-command" "flakes" ];  # Allow use of flakes
     };
 
-    gc = {
-      automatic = true;
+    gc = {  # Nix store garbage collection
+      automatic = true;  
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
