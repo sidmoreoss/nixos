@@ -7,7 +7,6 @@
       enable = true;  # Enable zsh
 
       shellAliases = {  # Add aliases here
-        ll = "ls -l";
         updateNixos = "cd ~/.setup/nixos && nix flake update";
         applyNixosConfiguration = "sudo nixos-rebuild switch --flake ~/.setup/nixos#dell7560";
       };
