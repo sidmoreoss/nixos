@@ -34,13 +34,13 @@
       # packagekit-qt  # Enable discover
       # discover
       filelight
+      kolourpaint
+      kcharselect
     ];
     plasma5.excludePackages = with pkgs.libsForQt5; [
       elisa
       khelpcenter
       oxygen
-      kolourpaint
-      kcharselect
     ];
   };
 }
