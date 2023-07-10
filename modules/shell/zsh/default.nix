@@ -8,7 +8,8 @@
 
       shellAliases = {  # Add aliases here
         ll = "ls -l";
-        update = "sudo nixos-rebuild switch -I nixos-config=$HOME/.config/nixos/configuration.nix";
+        updateNixos = "cd ~/.setup/nixos && nix flake update";
+        applyNixosConfiguration = "sudo nixos-rebuild switch --flake ~/.setup/nixos#dell7560";
       };
 
       autosuggestions.enable = true;  # Auto suggest options and highlights syntax, searches in history for options
