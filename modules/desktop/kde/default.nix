@@ -4,6 +4,7 @@
   programs = {
     dconf.enable = true;  # Enable GTK settings sync with KDE settings
     kdeconnect.enable = true;  # Enable KDE connect service
+    partition-manager.enable = true;  # KDE partition manager 
   };
 
   services.xserver = {
@@ -38,6 +39,8 @@
       elisa
       khelpcenter
       oxygen
+      kolourpaint
+      kcharselect
     ];
   };
 }
