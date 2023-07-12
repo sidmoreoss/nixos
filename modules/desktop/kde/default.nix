@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./sddm
+  ];
+
   programs = {
     dconf.enable = true;  # Enable GTK settings sync with KDE settings
     kdeconnect.enable = true;  # Enable KDE connect service
