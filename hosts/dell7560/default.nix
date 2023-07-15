@@ -6,5 +6,5 @@
     ./hardware-configuration.nix # Current system hardware config 
   ];
 
-  powerManagement.cpuFreqGovernor = lib.mkForce "performance";
+  powerManagement.cpuFreqGovernor = "performance";
 }
