@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  sound.enable = true;  # Enable ALSA sound
+  # https://nixos.wiki/wiki/PipeWire
   # security.rtkit.enable = true;  # Realtime scheduling mode, causes clipping https://wiki.archlinux.org/title/PipeWire#Troubleshooting
   services.pipewire = {
     enable = true;  # Enable sound with pipewire.
