@@ -8,8 +8,6 @@
 
     # Specify the kernel https://nixos.wiki/wiki/Linux_kernel
     # Kernel is device specific, recommended to define the kernel in host configuration
-    # kernelPackages = pkgs.linuxPackages_latest;
-    # kernelPackages = pkgs.linuxPackages_zen;
 
     loader = {
       # Use the systemd-boot EFI boot loader.
