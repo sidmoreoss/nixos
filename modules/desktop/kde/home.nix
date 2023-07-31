@@ -3,6 +3,8 @@
 {...}:
 
 {
+  imports = [ ./plasmaTheme ];
+
   # Plasma settings: plasma-manager
   programs.plasma = {
     enable = true;
@@ -95,11 +97,5 @@
       "kwinrulesrc"."General"."count" = 7;
       "kwinrulesrc"."General"."rules" = "1,2,3,4,5,6,7";
     };
-  };
-
-  # Breeze with materia icons theme
-  xdg.dataFile."plasma/desktoptheme/breezeWithMateriaIcons/" = {
-    source = ../../../resources/kde/breezeMateriaTheme;
-    recursive = true;
   };
 }
