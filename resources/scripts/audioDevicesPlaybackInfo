@@ -1,9 +1,0 @@
-#!/bin/sh
-
-while read -r ONE; do
-    read -r TWO
-    echo Card: $ONE
-    cardNumber=`echo $ONE | awk '{print $1}'`
-    cat "/proc/asound/card$cardNumber/pcm0p/sub0/hw_params"
-    echo
-done < /proc/asound/cards
