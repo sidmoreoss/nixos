@@ -4,8 +4,8 @@
     source = pkgs.fetchFromGitHub {
       owner = "PapirusDevelopmentTeam";
       repo = "materia-kde";
-      rev = "master";
-      sha256 = "tZWEVq2VYIvsQyFyMp7VVU1INbO7qikpQs4mYwghAVM=";
+      rev = "20220823";
+      sha256 = "sha256-/O+/L6C9WjxhfWZ8RzIeimNU+8sjKvbDvQwNlvVOjU4=";
     } + "/plasma/desktoptheme/Materia/icons";
     recursive = true;
   };
