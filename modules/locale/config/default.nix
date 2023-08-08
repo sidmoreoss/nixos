@@ -13,6 +13,6 @@
     LC_NUMERIC = "en_IN";
     LC_PAPER = "en_IN";
     LC_TELEPHONE = "en_IN";
-    LC_TIME = "en_IN";
+    LC_TIME = "en_GB.UTF-8";
   };
 }
