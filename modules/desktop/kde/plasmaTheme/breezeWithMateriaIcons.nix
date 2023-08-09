@@ -1,4 +1,5 @@
 { pkgs, ... }:{
+  # Learn how to filter files from source: https://www.youtube.com/watch?v=mOQI9Iiu4Uc
   # Breeze with materia icons theme
   xdg.dataFile."plasma/desktoptheme/breezeWithMateriaIcons/icons" = {
     source = pkgs.fetchFromGitHub {
