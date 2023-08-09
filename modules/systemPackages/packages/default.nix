@@ -7,7 +7,7 @@
     firefox-beta  # Beta version (v115 >) supports hardware video decoding
 
     # Text/Code editors
-    vim
+    neovim
     kate
     vscode
     
