@@ -7,7 +7,6 @@
     firefox-beta  # Beta version (v115 >) supports hardware video decoding
 
     # Text/Code editors
-    neovim
     kate
     vscode
     
@@ -26,6 +25,7 @@
     wget  # Downloader
     krename  # Bulk rename
     fzf  # Fuzzy search
+    ripgrep  # Dependency of my neovim config
 
     # Wallpaper
     variety
