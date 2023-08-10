@@ -9,7 +9,7 @@
                         owner  = "sidmoreoss";
                         repo   = "nvim";
                         rev    = "master";
-                        sha256 = "sha256-apt4wnHwlZgwdAYQeCgkQDxBDPQ2/Oxo5PTzYNtF1Fg=";
+                        sha256 = "sha256-nUaG/Co7vcEnBRLvU7lyJho+KqVHtdMMSmbY8ZuJQTw=";
                     };
                 };
             in {
