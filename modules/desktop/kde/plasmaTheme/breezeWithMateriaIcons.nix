@@ -1,11 +1,12 @@
 { pkgs, ... }:{
+  # Learn how to filter files from source: https://www.youtube.com/watch?v=mOQI9Iiu4Uc
   # Breeze with materia icons theme
   xdg.dataFile."plasma/desktoptheme/breezeWithMateriaIcons/icons" = {
     source = pkgs.fetchFromGitHub {
       owner = "PapirusDevelopmentTeam";
       repo = "materia-kde";
-      rev = "master";
-      sha256 = "tZWEVq2VYIvsQyFyMp7VVU1INbO7qikpQs4mYwghAVM=";
+      rev = "20220823";
+      sha256 = "sha256-/O+/L6C9WjxhfWZ8RzIeimNU+8sjKvbDvQwNlvVOjU4=";
     } + "/plasma/desktoptheme/Materia/icons";
     recursive = true;
   };

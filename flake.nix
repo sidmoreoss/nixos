@@ -3,7 +3,7 @@
 
   inputs =  # All flake references used to build my NixOS setup. These are dependencies.
     {
-      nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";  # Default Stable Nix Packages
+      nixpkgs.url = "github:nixos/nixpkgs";  # Default Stable Nix Packages
 
       nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";  # Unstable Nix Packages
 
