@@ -3,17 +3,17 @@
     nixpkgs = {
         overlays = [ (self: super:
             let
-                myNvimPlugin = super.vimUtils.buildVimPluginFrom2Nix {
-                    name = "myNvimPlugin";
+                lazynvim = super.vimUtils.buildVimPluginFrom2Nix {
+                    name = "lazynvim";
                     src  = pkgs.fetchFromGitHub {
                         owner  = "sidmoreoss";
                         repo   = "nvim";
                         rev    = "master";
-                        sha256 = "sha256-nUaG/Co7vcEnBRLvU7lyJho+KqVHtdMMSmbY8ZuJQTw=";
+                        sha256 = "sha256-WdzPnZcFmETdCQ3AT+wXq1/ukSHsr9Yg23zmb4a/58k=";
                     };
                 };
             in {
-                vimPlugins = super.vimPlugins // { inherit myNvimPlugin; };
+                vimPlugins = super.vimPlugins // { inherit lazynvim; };
             }
         ) ];
     };
@@ -27,7 +27,7 @@
         configure = {
             customRC = ''
                 lua << EOF
-                    require("main")
+                   require("lazynvim")
                 EOF
             '';
             packages.vimPlugins = with pkgs.vimPlugins; {
@@ -43,7 +43,7 @@
                     trouble-nvim
                     undotree
                     zen-mode-nvim
-                    myNvimPlugin
+                    lazynvim 
                 ];
             };
         };
