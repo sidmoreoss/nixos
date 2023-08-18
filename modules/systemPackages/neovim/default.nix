@@ -8,8 +8,8 @@
                     src  = pkgs.fetchFromGitHub {
                         owner  = "sidmoreoss";
                         repo   = "nvim";
-                        rev    = "master";
-                        sha256 = "sha256-WdzPnZcFmETdCQ3AT+wXq1/ukSHsr9Yg23zmb4a/58k=";
+                        rev    = "1.0.0";
+                        sha256 = "sha256-EwUCOdI7g3XNHGoP9xjyLbpMWOSS/iEJxyuhIsrLs6A=";
                     };
                 };
             in {
@@ -25,6 +25,7 @@
         viAlias = true;
         withNodeJs = true;
         configure = {
+            # This is required https://nixos.wiki/wiki/Neovim
             customRC = ''
                 lua << EOF
                    require("lazynvim")
@@ -35,11 +36,16 @@
                 start = [ 
                     vim-nix 
                     vim-fugitive 
+                    vim-floaterm
+                    gitsigns-nvim
                     harpoon
                     lsp-zero-nvim
                     refactoring-nvim
                     telescope-nvim
-                    nvim-treesitter
+                    nerdcommenter
+                    noice-nvim
+                    nvim-treesitter.withAllGrammars
+                    nvim-treesitter-context
                     trouble-nvim
                     undotree
                     zen-mode-nvim
