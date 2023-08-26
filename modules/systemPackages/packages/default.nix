@@ -8,7 +8,7 @@
 
     # Text/Code editors
     kate
-    vscode
+    # vscode - Replaced by neovim
     
     # Video players
     vlc
