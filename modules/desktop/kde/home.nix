@@ -96,6 +96,21 @@
       
       "kwinrulesrc"."General"."count" = 7;
       "kwinrulesrc"."General"."rules" = "1,2,3,4,5,6,7";
+
+      # Konsole configuration
+      "konsolerc"."Desktop Entry"."DefaultProfile" = "Konsole.profile";
+    };
+    dataFile = {
+      # Konsole configuration
+      "konsole/Konsole.profile"."General"."Name" = "Konsole";
+      "konsole/Konsole.profile"."General"."Parent" = "FALLBACK/";
+      "konsole/Konsole.profile"."Appearance"."AntiAliasFonts" = "true";
+      "konsole/Konsole.profile"."Appearance"."BoldIntense" = "true";
+      "konsole/Konsole.profile"."Appearance"."ColorScheme" = "Breeze";
+      "konsole/Konsole.profile"."Appearance"."Font" = "MesloLGS NF,14";
+      "konsole/Konsole.profile"."Appearance"."UseFontLineChararacters" = "true";
+      "konsole/Konsole.profile"."Scrolling"."HistorySize" = "10000";
+      "konsole/Konsole.profile"."Interaction Options"."AutoCopySelectedText" = "true";
     };
   };
 }

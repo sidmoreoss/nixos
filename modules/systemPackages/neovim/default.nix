@@ -8,8 +8,8 @@
                     src  = pkgs.fetchFromGitHub {
                         owner  = "sidmoreoss";
                         repo   = "nvim";
-                        rev    = "1.0.0";
-                        sha256 = "sha256-EwUCOdI7g3XNHGoP9xjyLbpMWOSS/iEJxyuhIsrLs6A=";
+                        rev    = "daa4231bcb776f547fec51482c07998237b81f28";
+                        sha256 = "sha256-nb//D/P6IfNOXBDywae56Zx+qmmxUHvQf+e0ivnud64=";
                     };
                 };
             in {
@@ -44,6 +44,7 @@
                     telescope-nvim
                     nerdcommenter
                     noice-nvim
+                    nvim-tree-lua
                     nvim-treesitter.withAllGrammars
                     nvim-treesitter-context
                     trouble-nvim
