@@ -34,22 +34,41 @@
             packages.vimPlugins = with pkgs.vimPlugins; {
                 # loaded on launch
                 start = [ 
-                    vim-nix 
-                    vim-fugitive 
-                    vim-floaterm
+                    # Git
                     gitsigns-nvim
-                    harpoon
+                    vim-fugitive 
+
+                    # Terminal
+                    vim-floaterm
+
+                    # Languages
+                    cmp-buffer
+                    cmp-path
+                    cmp-nvim-lua
+                    cmp-nvim-lsp
+                    cmp_luasnip
+                    lualine-nvim
                     lsp-zero-nvim
-                    refactoring-nvim
-                    telescope-nvim
                     nerdcommenter
-                    noice-nvim
-                    nvim-tree-lua
+                    nvim-cmp
+                    nvim-lspconfig
                     nvim-treesitter.withAllGrammars
                     nvim-treesitter-context
+                    vim-nix
+
+                    # Utils
+                    harpoon
+                    noice-nvim
+                    refactoring-nvim
+                    telescope-nvim
                     trouble-nvim
                     undotree
                     zen-mode-nvim
+
+                    #File browser
+                    nvim-tree-lua
+                    
+                    #My config
                     lazynvim 
                 ];
             };
